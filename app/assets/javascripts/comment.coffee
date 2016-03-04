@@ -1,7 +1,7 @@
 'use strict'
 
 # path to loading gif file
-gifElement = '<img src="/images/default.gif" alt="Loading..." title="Loading..." />'
+gifElement = '<img src="/assets/images/default.gif" alt="Loading..." title="Loading..." />'
 # element that will be placed if post have no comments
 noCommentsMessage = '<p class="text-center">No comments have been added yet.</p>'
 
