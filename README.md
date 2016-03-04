@@ -13,11 +13,11 @@
 
 - Posts on homepage sorted by the date added (DESC), comments sorted in ASC order.
 
-- Tree-like structure implemented using 'closure_tree' gem.
+- Tree-like structure implemented using `'closure_tree'` gem.
 
-- Infinite scrolling implemented via 'will_paginate' gem and ajax requests.
+- Infinite scrolling implemented via `'will_paginate'` gem and ajax requests.
 
-- To seed database with faked data used 'faker', 'factory_girl' gems. To populate DB run:
+- To seed database with faked data used `'faker'`, `'factory_girl'` gems. To populate DB run:
 
         `rake db:seed`
 
