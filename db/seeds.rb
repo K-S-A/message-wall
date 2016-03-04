@@ -1,4 +1,4 @@
-require 'factory_girl_rails'
+require 'factory_girl'
 require 'faker'
 
 FactoryGirl.create_list(:user, 20)     # Create list of faked users

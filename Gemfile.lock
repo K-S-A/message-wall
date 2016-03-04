@@ -295,6 +295,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.1)
   database_cleaner (~> 1.5)
   devise (~> 3.5)
+  factory_girl
   factory_girl_rails (~> 4.6)
   faker (~> 1.6)
   fuubar (~> 2.0)

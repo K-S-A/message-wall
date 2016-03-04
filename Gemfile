@@ -19,6 +19,7 @@ gem 'omniauth-vkontakte', '~> 1.3'
 gem 'closure_tree', '~> 6.0'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'factory_girl'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
