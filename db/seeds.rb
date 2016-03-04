@@ -1,7 +1,7 @@
 require 'factory_girl'
 require 'faker'
-require 'factories/messages'
-require 'factories/users'
+require 'spec/factories/messages'
+require 'spec/factories/users'
 
 FactoryGirl.create_list(:user, 20)     # Create list of faked users
 FactoryGirl.create_list(:post, 100)    # Seeding posts
