@@ -1,4 +1,3 @@
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+FactoryGirl.create_list(:user, 20)     # Create list of faked users
+FactoryGirl.create_list(:post, 100)    # Seeding posts
+FactoryGirl.create_list(:comment, 400) # Randomly add comments
