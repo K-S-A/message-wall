@@ -18,8 +18,8 @@ class Message < ActiveRecord::Base
 
   validates :body, presence: true,
                    length: { in: 1..200 },
-                   uniqueness: { scope: :parent_id,
-                                 message: 'can\'t have identical comments' }
+                   uniqueness: { case_sensitive: false }
+  validates :user, presence: true
 
   acts_as_tree dependent: :destroy, order: 'created_at'
 

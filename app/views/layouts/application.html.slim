@@ -27,8 +27,5 @@ html
             li= link_to 'Vkontakte', user_omniauth_authorize_path(:vkontakte)
 
     = flash_messages
-    / - flash.each do |key, value|
-    /   h4= key
-    /   h5= value
 
     = yield

@@ -12,7 +12,6 @@
         .col-md-3
           = f.label "#{current_user_name} on #{Time.now.strftime('%d %b %Y')}: ", { class: 'control-label', for: "body" }
           = f.submit 'Create Post', class: "btn btn-lg btn-success col-md-12"
-          / button#cancel.btn.btn-xs.btn-warning.col-md-6 'Cancel'
         .col-md-8
           = f.text_field :body, { class: 'input-lg form-control',
                                   type: 'text',
