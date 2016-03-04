@@ -1,0 +1,9 @@
+- if params[:id]
+  | $('##{ params[:id] }').find('.panel-footer').append('#{ j nested_tree_for(@messages) }');
+- else
+  | $('#wall').append('#{ j nested_tree_for(@messages) }');
+  - if @messages.next_page
+    | $('.pagination').replaceWith('#{ j will_paginate }');
+  - else
+    | $(window).off('scroll');
+    | $('.pagination').remove();

@@ -1,0 +1,18 @@
+.panel id="#{ message.id }" class="#{ panel_class_for(message) }"
+  div class="#{ class_for(message) }"
+    .row
+      .col-md-4
+        .glyphicon.glyphicon-menu-right
+        a href="#{ message.user.link }"
+          img.img-thumbnail src="#{ message.user.image }" /
+        span
+          = "#{ user_name_for(message) } on #{ message.datestamp }: "
+      .col-md-7
+        strong= "\"#{ message.body }\""
+      .col-md-1
+        - if current_user && current_user != message.user
+          button.btn.btn-success.pull-right Reply
+        - if current_user == message.user
+          #edit.button.btn.btn-danger.pull-right Edit
+  - if message.post?
+    .panel-footer.comments-group

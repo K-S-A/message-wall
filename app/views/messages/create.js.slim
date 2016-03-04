@@ -1,0 +1,12 @@
+-if @message.post?
+  | $('#post_body').val("").focus();
+  | $( '#wall' ).prepend('#{ j nested_tree_for([@message]) }');
+- else
+  | $('##{ @message.parent.id }').children('.comments-group').find('p').remove();
+  - if @message.parent.post?
+    | $('##{ @message.parent.id }').children('.comments-group').append('#{ j nested_tree_for([@message]) }');
+  - else
+    | $('##{ @message.parent.id }').parent().children('.comments-group').append('#{ j nested_tree_for([@message]) }');
+  | $( '#new_comment' ).remove();
+  | $('##{ @message.id }').css('background-color', 'green');
+  | $('##{ @message.id }')[0].scrollIntoView({ block: "end", behavior: "smooth" });

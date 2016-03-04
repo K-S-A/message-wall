@@ -1,0 +1,4 @@
+- if @message.parent.post?
+  | $('##{ params[:id] }').children().first().after('#{ j render('new_form') }');
+- else
+  | $('##{ params[:id] }').after('#{ j render('new_form') }');

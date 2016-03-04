@@ -1,0 +1,18 @@
+#new_comment
+  .panel.panel-primary
+    .panel-body
+      = form_for @message, { class: 'form-horizontal',
+                             remote: 'true',
+                             action: '/messages',
+                             method: 'patch',
+                             url: "/messages/#{@message.id}" } do |f|
+        .form-group.row
+          a.col-sm-1 href="#{ current_user.link }" 
+            img.img-thumbnail src="#{ current_user.image }" /
+          / = f.hidden_field :id, value: @message.id
+          .col-md-3
+            = f.label user_date_label, { class: 'control-label', for: "body" }
+            = f.submit class: "btn btn-xs btn-primary col-md-6"
+            button#cancel.btn.btn-xs.btn-warning.col-md-6 Cancel
+          .col-md-8
+            = f.text_field :body, { class: 'input-lg form-control', type: 'text' }

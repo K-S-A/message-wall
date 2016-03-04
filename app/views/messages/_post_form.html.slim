@@ -1,0 +1,20 @@
+.panel.panel-primary
+  .panel-heading
+    = form_for @message, { class: 'form-horizontal',
+                           remote: 'true',
+                           action: '/messages',
+                           method: 'post',
+                           url: messages_path } do |f|
+      .form-group.row
+        a.col-sm-1 href="#{current_user.link}" 
+          img.img-thumbnail src="#{current_user.image}" /
+        = f.hidden_field :parent_id, value: nil
+        .col-md-3
+          = f.label "#{current_user_name} on #{Time.now.strftime('%d %b %Y')}: ", { class: 'control-label', for: "body" }
+          = f.submit 'Create Post', class: "btn btn-lg btn-success col-md-12"
+          / button#cancel.btn.btn-xs.btn-warning.col-md-6 'Cancel'
+        .col-md-8
+          = f.text_field :body, { class: 'input-lg form-control',
+                                  type: 'text',
+                                  placeholder: "Enter message here...",
+                                  id: 'post_body' }
