@@ -2,7 +2,7 @@
 ---
 ## (Rails, jQuery, Bootstrap, coffee/slim)
 
-- Authorization with 'devise' and related omniauth gems.
+- Authorization with `'devise'` and related omniauth gems.
 
 - Implemented omniauth feature for:
 
