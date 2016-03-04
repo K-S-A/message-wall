@@ -50,6 +50,17 @@ Devise.setup do |config|
                     image_aspect_ratio: 'square',
                     image_size: 50
                   }
+
+  config.omniauth :facebook,
+                  ENV['FACEBOOK_APP_ID'],
+                  ENV['FACEBOOK_APP_SECRET'],
+                  { image_size: 'square' }
+
+  config.omniauth :vkontakte,
+                  ENV['VK_APP_ID'],
+                  ENV['VK_APP_SECRET'],
+                  { image_size: 'mini' }
+
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
