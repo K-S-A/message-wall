@@ -33,6 +33,7 @@ end
 group :test do
   gem 'database_cleaner', '~> 1.5'
   gem 'fuubar', '~> 2.0'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
