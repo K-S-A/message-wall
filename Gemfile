@@ -20,11 +20,11 @@ gem 'closure_tree', '~> 6.0'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'factory_girl'
+gem 'faker', '~> 1.6'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem 'factory_girl_rails', '~> 4.6'
-  gem 'faker', '~> 1.6'
 end
 
 group :production do
