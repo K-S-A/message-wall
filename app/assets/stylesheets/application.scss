@@ -10,6 +10,42 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+ * require_tree .
+ * require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+span {
+  margin: 10px;
+}
+
+li:hover {
+  @extend .active;
+}
+
+.comments .comments {
+  margin-left: 50px;
+}
+
+.panel-primary .panel-heading span {
+  color: white;
+}
+
+.panel-default {
+  margin: 0;
+}
+
+.panel-default:hover {
+  background: #337ab7;
+  color: white;
+}
+
+.panel {
+  margin: 0;
+}
+
+.glyphicon:hover {
+  cursor: pointer;
+  cursor: hand;
+}
